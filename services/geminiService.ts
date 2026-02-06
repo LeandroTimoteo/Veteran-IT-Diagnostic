@@ -31,19 +31,16 @@ export async function getVeteranDiagnosis(prompt: string): Promise<DiagnosisResp
         "X-Title": "Veteran IT Diagnostic",
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: "google/gemma-3-12b-it:free",
+        // Alguns providers do Gemma não aceitam role "system". Mesclamos instruções no prompt do usuário.
         messages: [
           {
-            role: "system",
-            content: systemInstruction,
-          },
-          {
             role: "user",
-            content: prompt,
+            content: `${systemInstruction}\n\nPedido do usuário:\n${prompt}`,
           },
         ],
         temperature: 0.7,
-        max_tokens: 2000,
+        max_tokens: 1024,
       }),
     });
 

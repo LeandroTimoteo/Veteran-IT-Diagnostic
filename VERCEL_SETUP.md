@@ -2,8 +2,8 @@
 
 ## Configuração para Vercel
 
-1. **Clonar o projeto no Vercel**
-   - Conecte seu repositório GitHub ao Vercel
+1. **Importar o projeto**
+   - Conecte o repositório do GitHub ao Vercel
    - Importe o projeto
 
 2. **Variáveis de Ambiente no Vercel**
@@ -11,7 +11,7 @@
    - Adicione:
      ```
      Name: VITE_OPENROUTER_API_KEY
-     Value: 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
+     Value: <sua-chave-openrouter>
      ```
 
 3. **Build Settings** (automático)
@@ -24,22 +24,14 @@
 
 ## Variáveis de Ambiente
 
-- `.env.local` - Desenvolvimento local
+- `.env.local` - Desenvolvimento local (não versionado)
 - `.env.example` - Template para documentação
-- `.env.production` - Produção (Vercel)
+- `.env.production` - Produção (não incluir segredos no repositório)
 - Vercel Dashboard - Recomendado para secrets em produção
 
 ## Segurança
 
-⚠️ **IMPORTANTE**: Sua chave de API está exposta neste repositório. Para máxima segurança:
-1. Gere uma nova chave no OpenRouter
-2. Remova a chave atual do histórico do git
-3. Configure apenas via Vercel Environment Variables (não no repositório)
-
-## Dependências Atualizadas
-
-- Removido: `@google/genai` (Gemini)
-- Adicionado: Fetch API nativa (OpenRouter)
+⚠️ **IMPORTANTE**: Não versionar chaves de API no repositório. Configure apenas via Vercel Environment Variables.
 
 ## Teste Local
 
