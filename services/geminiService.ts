@@ -1,6 +1,7 @@
 import { DiagnosisResponse } from "../types";
 
 const OPENROUTER_API_KEY = import.meta.env.VITE_OPENROUTER_API_KEY;
+const OPENROUTER_MODEL = import.meta.env.VITE_OPENROUTER_MODEL || "qwen/qwen3-4b:free";
 const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
 
 export async function getVeteranDiagnosis(prompt: string): Promise<DiagnosisResponse> {
@@ -31,8 +32,7 @@ export async function getVeteranDiagnosis(prompt: string): Promise<DiagnosisResp
         "X-Title": "Veteran IT Diagnostic",
       },
       body: JSON.stringify({
-        model: "google/gemma-3-12b-it:free",
-        // Alguns providers do Gemma não aceitam role "system". Mesclamos instruções no prompt do usuário.
+        model: OPENROUTER_MODEL,
         messages: [
           {
             role: "user",
@@ -58,14 +58,20 @@ export async function getVeteranDiagnosis(prompt: string): Promise<DiagnosisResp
       throw new Error("A resposta da API está vazia.");
     }
 
-    // Parse JSON from response (pode estar entre ```json e ``` se necessário)
-    let jsonStr = content;
-    const jsonMatch = content.match(/```json\s*([\s\S]*?)\s*```/);
-    if (jsonMatch) {
-      jsonStr = jsonMatch[1];
+    // Parse JSON from response (suporta resposta em markdown ou texto com JSON embutido)
+    let jsonStr = content.trim();
+    const jsonFenceMatch = content.match(/```json\s*([\s\S]*?)\s*```/i);
+    if (jsonFenceMatch?.[1]) {
+      jsonStr = jsonFenceMatch[1].trim();
+    } else {
+      const firstBrace = content.indexOf("{");
+      const lastBrace = content.lastIndexOf("}");
+      if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+        jsonStr = content.slice(firstBrace, lastBrace + 1).trim();
+      }
     }
 
-    const parsedResponse = JSON.parse(jsonStr.trim()) as DiagnosisResponse;
+    const parsedResponse = JSON.parse(jsonStr) as DiagnosisResponse;
     
     // Validar que temos os campos obrigatórios
     if (!parsedResponse.analysis || !parsedResponse.recommendations || !parsedResponse.principles) {

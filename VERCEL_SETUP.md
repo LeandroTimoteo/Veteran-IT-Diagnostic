@@ -13,6 +13,10 @@
      Name: VITE_OPENROUTER_API_KEY
      Value: <sua-chave-openrouter>
      ```
+     ```
+     Name: VITE_OPENROUTER_MODEL
+     Value: qwen/qwen3-4b:free
+     ```
 
 3. **Build Settings** (automático)
    - Framework: Vite
