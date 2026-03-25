@@ -13,12 +13,15 @@ const App: React.FC = () => {
   const [diagnosis, setDiagnosis] = useState<DiagnosisResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  const [resetToken, setResetToken] = useState(0);
+
   const t = translations[lang];
 
   const handleReset = () => {
     setDiagnosis(null);
     setError(null);
     setLoadingState(LoadingState.IDLE);
+    setResetToken((prev) => prev + 1);
   };
 
   const handleAnalyze = async (problem: string) => {
@@ -99,6 +102,7 @@ const App: React.FC = () => {
             isLoading={loadingState === LoadingState.LOADING}
             lang={lang}
             diagnosis={diagnosis}
+            resetToken={resetToken}
           />
 
           {error && (

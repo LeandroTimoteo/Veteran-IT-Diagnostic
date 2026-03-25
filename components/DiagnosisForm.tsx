@@ -9,9 +9,10 @@ interface DiagnosisFormProps {
   isLoading: boolean;
   lang: Language;
   diagnosis: any;
+  resetToken: number;
 }
 
-const DiagnosisForm: React.FC<DiagnosisFormProps> = ({ onAnalyze, onReset, isLoading, lang, diagnosis }) => {
+const DiagnosisForm: React.FC<DiagnosisFormProps> = ({ onAnalyze, onReset, isLoading, lang, diagnosis, resetToken }) => {
   const [input, setInput] = useState('');
   const t = translations[lang];
   
@@ -19,6 +20,11 @@ const DiagnosisForm: React.FC<DiagnosisFormProps> = ({ onAnalyze, onReset, isLoa
   React.useEffect(() => {
     // Force re-render quando lang muda
   }, [lang]);
+
+  // Limpar o campo de texto quando o token de reset for atualizado
+  React.useEffect(() => {
+    setInput('');
+  }, [resetToken]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

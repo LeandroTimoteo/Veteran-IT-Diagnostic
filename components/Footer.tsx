@@ -29,6 +29,14 @@ const Footer: React.FC<FooterProps> = ({ lang }) => {
             <h4 className="text-xs font-bold uppercase tracking-widest text-slate-500">Contato</h4>
             <p className="text-md font-bold">{t.contactName}</p>
             <a href="tel:5583987830223" className="text-blue-400 font-mono">83 98783-0223</a>
+            <div>
+              <a
+                href="mailto:leandrinhots6@gmail.com"
+                className="inline-block bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded font-bold text-xs uppercase tracking-widest transition-colors"
+              >
+                Email
+              </a>
+            </div>
           </div>
         </div>
         <p className="text-[10px] text-slate-600 uppercase tracking-widest text-center">{t.footerCopyright}</p>

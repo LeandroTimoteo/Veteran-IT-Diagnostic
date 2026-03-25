@@ -1,0 +1,13 @@
+Testing API Key: sk-or-v1-6...
+
+Testing model: openrouter/free
+✅ SUCCESS: Olá, o modelo está ativo e funcionando
+
+Testing model: qwen/qwen3-coder:free
+❌ FAILED (429): Provider returned error
+
+Testing model: qwen/qwen3-next-80b-a3b-instruct:free
+❌ FAILED (429): Provider returned error
+
+Testing model: nvidia/nemotron-3-super-120b-a12b:free
+✅ SUCCESS: Olá, o modelo está ativoe funcionando.

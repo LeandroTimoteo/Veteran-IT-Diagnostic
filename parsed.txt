@@ -1,0 +1,12 @@
+Free Qwen models: [
+  'qwen/qwen3-next-80b-a3b-instruct:free',
+  'qwen/qwen3-coder:free',
+  'qwen/qwen3-4b:free'
+]
+Other free models: [
+  'nvidia/nemotron-3-super-120b-a12b:free',
+  'minimax/minimax-m2.5:free',
+  'openrouter/free',
+  'stepfun/step-3.5-flash:free',
+  'arcee-ai/trinity-large-preview:free'
+]

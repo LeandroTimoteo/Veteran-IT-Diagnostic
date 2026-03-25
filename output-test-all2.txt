@@ -1,0 +1,19 @@
+Testing API Key: sk-or-v1-6...
+
+Testing model: google/gemini-2.0-flash-lite-preview-02-05:free
+❌ FAILED (400): google/gemini-2.0-flash-lite-preview-02-05:free is not a valid model ID
+
+Testing model: mistralai/mistral-7b-instruct:free
+❌ FAILED (404): No endpoints found for mistralai/mistral-7b-instruct:free.
+
+Testing model: meta-llama/llama-3.1-8b-instruct:free
+❌ FAILED (404): No endpoints found for meta-llama/llama-3.1-8b-instruct:free.
+
+Testing model: qwen/qwen-2.5-72b-instruct:free
+❌ FAILED (404): No endpoints found for qwen/qwen-2.5-72b-instruct:free.
+
+Testing model: nousresearch/hermes-3-llama-3.1-405b:free
+❌ FAILED (429): Provider returned error
+
+Testing model: cognitivecomputations/dolphin3.0-r1-mistral-24b:free
+❌ FAILED (404): No endpoints found for cognitivecomputations/dolphin3.0-r1-mistral-24b:free.

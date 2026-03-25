@@ -1,0 +1,9 @@
+Testing OpenRouter API with key: sk-or-v1-6...
+Using model: qwen/qwen-2.5-72b-instruct:free
+API Error Response:  404 {
+  error: {
+    message: 'No endpoints found for qwen/qwen-2.5-72b-instruct:free.',
+    code: 404
+  },
+  user_id: 'user_32vUzKMVTTcH5lbKQhfqgImXoez'
+}

@@ -1,0 +1,33 @@
+
+> veteran-it-diagnostic---leandro-timóteo@0.0.0 dev
+> vite 
+
+[2m15:38:21[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because vite config has changed
+
+  [32m[1mVITE[22m v6.4.1[39m  [2mready in [0m[1m703[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m3000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.0.2:[1m3000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://172.18.160.1:[1m3000[22m/[39m
+[2m15:39:50[22m [36m[1m[vite][22m[39m [32mvite.config.ts changed, restarting server...[39m
+[2m15:39:50[22m [36m[1m[vite][22m[39m server restarted.
+[2m16:13:41[22m [36m[1m[vite][22m[39m [32m.env.local changed, restarting server...[39m
+[2m16:13:42[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because vite config has changed
+[2m16:13:42[22m [36m[1m[vite][22m[39m server restarted.
+[2m16:19:37[22m [36m[1m[vite][22m[39m [32m.env.local changed, restarting server...[39m
+[2m16:19:37[22m [36m[1m[vite][22m[39m server restarted.
+[2m16:20:05[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/leand/OneDrive/Ambiente de Trabalho/Projetos 2025/Veteran-it-diagnostic/index.css, /@fs/C:/Users/leand/OneDrive/Ambiente de Trabalho/Projetos 2025/Veteran-it-diagnostic/App.tsx, /index.css?direct[22m
+[2m16:26:24[22m [36m[1m[vite][22m[39m [32m.env.local changed, restarting server...[39m
+[2m16:26:24[22m [36m[1m[vite][22m[39m server restarted.
+[2m16:51:18[22m [36m[1m[vite][22m[39m [32m.env.local changed, restarting server...[39m
+[2m16:51:19[22m [36m[1m[vite][22m[39m server restarted.
+[2m08:39:13[22m [36m[1m[vite][22m[39m [32m.env.local changed, restarting server...[39m
+[2m08:39:13[22m [36m[1m[vite][22m[39m server restarted.
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m3000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.0.3:[1m3000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://172.18.160.1:[1m3000[22m/[39m
+[2m08:39:15[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/leand/OneDrive/Ambiente de Trabalho/Projetos 2025/Veteran-it-diagnostic/index.css, /@fs/C:/Users/leand/OneDrive/Ambiente de Trabalho/Projetos 2025/Veteran-it-diagnostic/App.tsx, /index.css?direct[22m
+[2m09:01:37[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/leand/OneDrive/Ambiente de Trabalho/Projetos 2025/Veteran-it-diagnostic/App.tsx, /@fs/C:/Users/leand/OneDrive/Ambiente de Trabalho/Projetos 2025/Veteran-it-diagnostic/index.css, /index.css?direct[22m
+[2m09:01:40[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:/Users/leand/OneDrive/Ambiente de Trabalho/Projetos 2025/Veteran-it-diagnostic/App.tsx, /@fs/C:/Users/leand/OneDrive/Ambiente de Trabalho/Projetos 2025/Veteran-it-diagnostic/index.css, /index.css?direct[22m
+[2m09:01:42[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/components/DiagnosisForm.tsx, /@fs/C:/Users/leand/OneDrive/Ambiente de Trabalho/Projetos 2025/Veteran-it-diagnostic/index.css, /index.css?direct[22m

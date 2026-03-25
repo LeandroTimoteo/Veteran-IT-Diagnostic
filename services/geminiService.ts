@@ -23,7 +23,7 @@ export async function getVeteranDiagnosis(prompt: string): Promise<DiagnosisResp
   `;
 
   try {
-    const response = await fetch(OPENROUTER_API_URL, {
+    let response = await fetch(OPENROUTER_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,6 +43,30 @@ export async function getVeteranDiagnosis(prompt: string): Promise<DiagnosisResp
         max_tokens: 1024,
       }),
     });
+
+    if (!response.ok) {
+      console.warn(`Modelo principal falhou (status ${response.status}). Tentando modelo de fallback...`);
+      response = await fetch(OPENROUTER_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+          "HTTP-Referer": window.location.origin,
+          "X-Title": "Veteran IT Diagnostic",
+        },
+        body: JSON.stringify({
+          model: "nvidia/nemotron-3-super-120b-a12b:free",
+          messages: [
+            {
+              role: "user",
+              content: `${systemInstruction}\n\nPedido do usuário:\n${prompt}`,
+            },
+          ],
+          temperature: 0.7,
+          max_tokens: 1024,
+        }),
+      });
+    }
 
     if (!response.ok) {
       const error = await response.json();
