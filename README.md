@@ -37,7 +37,7 @@ Think in terms of architecture, UX, and maintainability
 Deliver a working product — not just code
 
 # 📌 GitHub Repository
-https://github.com/LeandroTimoteo/Veteran-IT-Diagnostic-2026
+https://github.com/LeandroTimoteo/Veteran-IT-Diagnostic
 
 # 📫 Contact: Leandro Timoteo  Systems Analyst/ Software Engineer
 
@@ -45,9 +45,12 @@ https://github.com/LeandroTimoteo/Veteran-IT-Diagnostic-2026
 
 💻 GitHub: https://github.com/LeandroTimoteo
 
-📱 WhatsApp: +55 83 98783-0223
+📱 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat-green?logo=whatsapp)](https://wa.me/5583987830223)
+
 
 # Veteran-it-diagnostic
+[![Deploy with Vercel](https://vercel.com/button)](https://veteran-it-diagnostic.vercel.app)
+
 
 # App photo;
 
